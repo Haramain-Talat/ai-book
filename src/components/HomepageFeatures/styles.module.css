@@ -1,0 +1,60 @@
+.features {
+  padding: 4rem 0; /* Adjusted padding for better section spacing */
+  width: 100%;
+}
+
+.featureSvg {
+  height: 150px; /* Slightly smaller SVG for better balance */
+  width: 150px;
+  margin-bottom: 1.5rem;
+}
+
+/* Feature card styling */
+.features .col {
+  margin-bottom: 2rem; /* Spacing between cards */
+}
+
+.features article {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure equal height for cards */
+  padding: 2rem;
+  background-color: var(--ifm-background-color);
+  border-radius: 8px; /* Subtle border radius */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Soft shadow */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.features article:hover {
+  transform: translateY(-5px); /* Gentle hover effect */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Slightly more pronounced shadow on hover */
+}
+
+.features article h3 {
+  font-size: 1.8rem; /* More prominent heading */
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary-dark);
+}
+
+.features article p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ifm-font-color-base);
+  flex-grow: 1; /* Allow description to take available space for equal height */
+}
+
+@media screen and (max-width: 768px) {
+  .featureSvg {
+    height: 120px;
+    width: 120px;
+  }
+
+  .features article {
+    padding: 1.5rem;
+  }
+
+  .features article h3 {
+    font-size: 1.5rem;
+  }
+}

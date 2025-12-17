@@ -1,0 +1,130 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+/* Hero Banner */
+.heroBanner {
+  padding: 6rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--ifm-color-primary-darkest); /* Subtle background */
+  color: var(--ifm-font-color-base);
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 3rem 0;
+  }
+}
+
+/* Headings */
+.heroBanner h1.hero__title {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-white); /* White for contrast */
+  letter-spacing: -0.05rem;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner h1.hero__title {
+    font-size: 2.5rem;
+  }
+}
+
+.heroBanner .hero__subtitle {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 800px; /* Limit subtitle width */
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--ifm-color-white); /* White for contrast */
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner .hero__subtitle {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  gap: 1.5rem; /* Spacing between buttons */
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons .button {
+  font-size: 1.1rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 8px; /* Slightly more rounded corners */
+  transition: all 0.2s ease-in-out;
+}
+
+.buttons .button--secondary {
+  background-color: var(--ifm-color-primary); /* Primary color for secondary button */
+  color: var(--ifm-color-white);
+  border: 1px solid var(--ifm-color-primary);
+}
+
+.buttons .button--secondary:hover {
+  background-color: var(--ifm-color-primary-dark);
+  color: var(--ifm-color-white);
+  transform: translateY(-2px); /* Subtle hover effect */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Overall Layout and Spacing */
+.mainWrapper {
+  padding: 4rem 0;
+  max-width: var(--ifm-container-width); /* Consistent max-width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 996px) {
+  .mainWrapper {
+    padding: 2rem 0;
+  }
+}
+
+/* Feature Cards (HomepageFeatures component styling) */
+/* Assuming HomepageFeatures uses default Docusaurus components,
+   we can target generic classes or use global styles */
+.features {
+  padding: 2rem 0;
+}
+
+.features article {
+  /* Subtle card effect */
+  background-color: var(--ifm-background-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease-in-out;
+  height: 100%; /* Ensure equal card heights */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.features article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.features h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary-dark);
+}
+
+.features p {
+  line-height: 1.6;
+}
